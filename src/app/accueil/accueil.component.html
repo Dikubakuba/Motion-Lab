@@ -1,9 +1,18 @@
 <div class="app-shell">
   <aside class="sidebar" aria-label="Navigation principale">
     <a class="brand" href="#accueil" aria-label="Motion Lab, accueil">
-      <span style="color: #b8f36c" class="brand-mark"
+      <!-- <span style="color: #b8f36c" class="brand-mark"
         ><span></span><span></span><span></span
-      ></span>
+      ></span> -->
+      <br /><br /><br />
+      <section
+        style="position: absolute; z-index: 999"
+        *ngIf="etatmenu == false"
+      >
+        <span style="color: #b8f36c" class="brand-mark"
+          ><span></span><span></span><span></span></span
+        >motion<span style="color: #b8f36c">lab</span>
+      </section>
       <span
         >motion<span style="color: #b8f36c" class="brand-light">lab</span></span
       >
@@ -40,7 +49,21 @@
   </aside>
 
   <main class="main-content" id="accueil">
-    <header class="topbar">
+    <header
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+      "
+      class="topbar"
+    >
+      <div></div>
       <div class="breadcrumb">
         <span>Atelier</span><span class="crumb-slash">/</span
         ><strong>{{ currentLesson.short }}</strong>
@@ -48,23 +71,48 @@
       <div class="topbar-right">
         <span class="keyboard-hint"
           ><kbd>⌘</kbd> + <kbd>K</kbd> pour explorer</span
-        ><span (click)="menu()" class="avatar">ML</span>
+        ><span
+          ><img
+            (click)="menu()"
+            class="avatar"
+            width="100%"
+            src="https://th.bing.com/th/id/OIP.PV3XpsQRvK_gB-TgkYxLxgHaEK?w=330&h=186&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
+            alt=""
+        /></span>
       </div>
     </header>
-    <menu
-      style="
-        background: white;
-        width: 100%;
-        height: 100vh;
-        z-index: 9999;
-        position: fixed;
-        top: 0;
-        left: 0;
-      "
-      *ngIf="etatmenu == true"
-    >
-      <ul>
-        <li>hello</li>
+    <br /><br /><br />
+    <menu class="men-menu" *ngIf="etatmenu == true">
+      <h1
+        style="
+          margin-left: -50px;
+          padding: 10px 0 0 20px;
+          flex-wrap: wrap;
+          text-align: center;
+          font-weight: 700;
+          font-size: 20px;
+          width: 90px;
+        "
+      >
+        <span style="color: #b8f36c" class="brand-mark"
+          ><span></span><span></span><span></span></span
+        >motion<span style="color: #b8f36c">lab</span>
+      </h1>
+
+      <ul
+        *ngFor="let i of compte"
+        style="
+          margin-left: -30px;
+          list-style: none;
+          padding: 40px 0 0 10px;
+          gap: 30px;
+          display: flex;
+          flex-direction: column;
+        "
+      >
+        <li class="long">
+          <img style="width: 100%" [src]="i.image" [alt]="i.url" />
+        </li>
       </ul>
     </menu>
 
