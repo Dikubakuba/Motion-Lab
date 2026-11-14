@@ -1,0 +1,210 @@
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Accueil Login Demo">
+        <span class="brand-mark" aria-hidden="true"
+          ><span></span><span></span><span></span><span></span
+        ></span>
+        <span>login<span class="brand-light">demo</span></span>
+      </a>
+      <p class="topbar-note">
+        Nouveau ici ?
+        <a href="#signup">Créer un compte <span aria-hidden="true">↗</span></a>
+      </p>
+    </header>
+
+    <section class="auth-layout" aria-label="Connexion ou inscription">
+      <div class="welcome-panel">
+        <div class="welcome-copy">
+          <span class="eyebrow"
+            ><span class="eyebrow-dot"></span> Votre espace, tout
+            simplement</span
+          >
+          <h1>
+            Ravi de vous<br />revoir
+            <span class="wave" aria-hidden="true">✦</span>
+          </h1>
+          <p>
+            Connectez-vous pour retrouver votre espace. Pas encore de compte ?
+            On vous attend !
+          </p>
+        </div>
+        <div class="illustration-wrap" aria-hidden="true">
+          <span class="sunburst burst-one"></span>
+          <span class="sunburst burst-two"></span>
+          <span class="float-shape shape-circle"></span>
+          <span class="float-shape shape-diamond"></span>
+          <img class="character" src="person.svg" alt="" />
+          <div class="speech-bubble">
+            <span>Salut !</span><span class="bubble-heart">♥</span>
+          </div>
+          <div class="ground-shadow"></div>
+        </div>
+        <div class="welcome-footer">
+          <span class="avatar-stack" aria-hidden="true"
+            ><i>J</i><i>M</i><i>A</i></span
+          >
+          <span
+            >Rejoignez une communauté qui grandit
+            <strong>chaque jour.</strong></span
+          >
+        </div>
+      </div>
+
+      <div class="form-panel">
+        <div class="form-card">
+          <div class="form-heading">
+            <span class="mobile-mark" aria-hidden="true">✦</span>
+            <p class="form-kicker">VOTRE ESPACE PERSONNEL</p>
+            <h2>Bonjour !</h2>
+            <p class="form-subtitle">Entrez vos informations pour continuer.</p>
+          </div>
+
+          <div class="auth-tabs" role="tablist" aria-label="Choisir une action">
+            <a class="auth-tab active" href="#login" role="tab">Connexion</a>
+            <a class="auth-tab" href="#signup" role="tab">Inscription</a>
+          </div>
+
+          <form class="auth-form login-form" id="login" action="#" method="get">
+            <label for="login-email">Adresse e-mail</label>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+              <input
+                id="login-email"
+                name="email"
+                type="email"
+                placeholder="vous@exemple.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="label-row">
+              <label for="login-password">Mot de passe</label>
+              <a href="#forgot">Oublié ?</a>
+            </div>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="10" width="16" height="11" rx="3"></rect>
+                <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"></path>
+              </svg>
+              <input
+                id="login-password"
+                name="password"
+                type="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+
+            <div class="form-options">
+              <label class="check-label"
+                ><input type="checkbox" name="remember" /><span
+                  class="custom-check"
+                  aria-hidden="true"
+                ></span>
+                Se souvenir de moi</label
+              >
+            </div>
+            <button
+              style="background: blue"
+              class="submit-button"
+              type="submit"
+            >
+              Se connecter <span aria-hidden="true">→</span>
+            </button>
+          </form>
+
+          <form
+            class="auth-form signup-form"
+            id="signup"
+            action="#"
+            method="get"
+          >
+            <label for="signup-name">Votre prénom</label>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M4 21a8 8 0 0 1 16 0"></path>
+              </svg>
+              <input
+                id="signup-name"
+                name="name"
+                type="text"
+                placeholder="Camille"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+            <label for="signup-email">Adresse e-mail</label>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+              <input
+                id="signup-email"
+                name="email"
+                type="email"
+                placeholder="vous@exemple.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <label for="signup-password">Créer un mot de passe</label>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="10" width="16" height="11" rx="3"></rect>
+                <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"></path>
+              </svg>
+              <input
+                id="signup-password"
+                name="password"
+                type="password"
+                placeholder="8 caractères minimum"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              />
+            </div>
+            <label class="check-label terms-check"
+              ><input type="checkbox" name="terms" required /><span
+                class="custom-check"
+                aria-hidden="true"
+              ></span>
+              J'accepte les
+              <a href="#terms">conditions d'utilisation</a>.</label
+            >
+            <button
+              style="background: blue"
+              class="submit-button"
+              type="submit"
+            >
+              Créer mon compte <span aria-hidden="true">→</span>
+            </button>
+          </form>
+
+          <div class="divider"><span>ou continuer avec</span></div>
+          <button class="social-button" type="button" routerLink="/accueil">
+            <span class="google-icon" aria-hidden="true">G</span> Google
+          </button>
+          <p class="legal-note">
+            En continuant, vous acceptez nos
+            <a href="#terms">Conditions d'utilisation</a> et notre
+            <a href="#privacy">Politique de confidentialité</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <span>© 2026 Login Demo</span
+      ><span class="footer-heart">Fait avec ♥ pour vous</span
+      ><a href="#help">Besoin d'aide ?</a>
+    </footer>
+  </main>
+</body>
